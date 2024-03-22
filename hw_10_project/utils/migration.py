@@ -6,9 +6,9 @@ from pymongo import MongoClient
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hw_10_project.hw_10_project.settings')
 django.setup()
 
-from quotes.models import Quote, Tag, Author
+from hw_10_project.quotes.models import Quote, Tag, Author
 
-client = MongoClient('mongodb://localhost')
+client = MongoClient('mongodb://localhost:27017')
 
 db = client.hw_10
 

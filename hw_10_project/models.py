@@ -1,6 +1,6 @@
 from mongoengine import connect, Document, StringField, ReferenceField, ListField, CASCADE
 
-connect(db="homework", host="mongodb://localhost:27017")
+connect(db="hw_10", host="mongodb://localhost:27017")
 
 class Author(Document):
     fullname = StringField(required=True, unique=True)
