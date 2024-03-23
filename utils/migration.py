@@ -3,10 +3,10 @@ import django
 
 from pymongo import MongoClient
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hw_10_project.hw_10_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hw_10_project.settings')
 django.setup()
 
-from hw_10_project.quotes.models import Quote, Tag, Author
+from quotes.models import Quote, Tag, Author
 
 client = MongoClient('mongodb://localhost:27017')
 

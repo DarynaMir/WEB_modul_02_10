@@ -5,7 +5,7 @@
 {% block content %}
 
 <div style="width: 50%; margin: auto; text-align: center; font-family: 'Raleway';font-size: large;">
-    <h2 style="color: green; margin-bottom: 50px;">ADD QUOTE</h2>
+    <h2 style="color: black; margin-bottom: 50px;">ADD QUOTE</h2>
     <form method="post" action="{% url 'quotes:add_quote' %}" style="display: inline-block; text-align: left;">
         {% csrf_token %}
         <div style="margin-bottom: 10px;">

@@ -22,20 +22,20 @@ def main(request, page=1):
         context={"quotes": quotes_on_page, "paginator": paginator},
     )
 
-class QuoteListView(View):
-     template_name = "quotes/index.html"
-     per_page = 10
+#class QuoteListView(View):
+ #    template_name = "quotes/index.html"
+  #   per_page = 10
 
-     def get(self, request, page=1):
-         db = get_mongodb()
-         quotes = db.quoters.find()
-         paginator = Paginator(list(quotes), self.per_page)
-         quotes_on_page = paginator.page(page)
-         return render(
-             request,
-             self.template_name,
-             context={"quotes": quotes_on_page, "paginator": paginator},
-         )
+   #  def get(self, request, page=1):
+    #     db = get_mongodb()
+     #    quotes = db.quoters.find()
+      #   paginator = Paginator(list(quotes), self.per_page)
+       #  quotes_on_page = paginator.page(page)
+        # return render(
+         #    request,
+          #   self.template_name,
+           #  context={"quotes": quotes_on_page, "paginator": paginator},
+         #)
 
 class AuthorDetailView(View):
     template_name = "quotes/author.html"
